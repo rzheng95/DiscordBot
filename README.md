@@ -1,2 +1,2 @@
 # DiscordBot
-A discord bot.
+A discord bot with the usage of Discord.js
