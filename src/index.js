@@ -50,6 +50,10 @@ client.on('message', async message => {
         skip(message, serverQueue);
     } else if (message.content === `${prefix}stop`) {
         stop(message, serverQueue);
+    } else if (message.content.startsWith(`${prefix}google`)) {
+        let eventFunction = require('./google');
+
+        eventFunction.run(client, message);
     } else {
         message.channel.send('You need to enter a valid command!')
     }
